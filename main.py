@@ -1,4 +1,12 @@
-def quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt):
+#0 = Gloria
+#1 = Radicerne
+#2 = Broto
+#3 = Tocha
+#4 = Beladona
+
+itens = [8.49, 11.75, 7.82, 6.99, 1.75]
+frasco = [149.99]
+def quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt): #Para craftar Frasco de Poder Espectral
 
 
     menor = broto_qnt
@@ -16,19 +24,13 @@ def quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt):
     
     return menor
 
-def lucro_def():
-    broto = (10)
-    ascend = int(10)
-    radicerne = int(12)
-    beladona = int(2)
-    tocha = int(8)
+def lucro_def(): #Lucro do Frasco de Poder Espectral
     gold_atual = int(115000)
 
 
-    craft = ((beladona*3) + (ascend*4) + (radicerne * 4) + (broto * 4) + (tocha * 4) )
-    frasco = int(172)
-    lucro = frasco - craft 
-    if craft<frasco:
+    craft = ((itens[4]*3) + (itens[0]*4) + (itens[1] * 4) + (itens[2] * 4) + (itens[3] * 4) )
+    lucro = frasco[0] - craft 
+    if craft<frasco[0]:
         print(f'O custo do craft é {craft:.2f}, seu lucro seria {(lucro):.2f}g')
         print(f'com {gold_atual}g, você iria ter de lucro {((gold_atual / craft) * lucro):.0f}g')
         print()
@@ -36,7 +38,7 @@ def lucro_def():
         print(f'O custo do craft é {craft:.2f}, seu prejuizo seria {(lucro):.2f}g')
         print()
 
-def quantidade_print():
+def quantidade_print(): #Quantidade de itens possiveis para craft
     broto_qnt = int(input('Digite a quantidade de Broto: '))
     ascend_qnt = int(input('Digite a quantidade de Ascedente: '))
     radicerne_qnt = int(input('Digite a quantidade de Radicerne: '))
@@ -52,12 +54,7 @@ def quantidade_print():
     print(f'Com mais {faltante} você consegue craftar outro item')
     print()
 
-def quantity():
-    #1 = Gloria
-    #2 = Radicerne
-    #3 = Broto
-    #4 = Tocha
-    itens = [8.68, 11.93, 7.50, 7.53]
+def quantity(): #Quantos Frasco de Poder Espectral, consegue craftar com a quantia de gold atual.
 
     quantity = int(input(f'Digite a quantidade de itens desejada: '))
     gold = int(input(f'Digite a quantidade de gold disponivel: '))
@@ -94,3 +91,4 @@ def menu():
 
 while True:
     menu()
+    
