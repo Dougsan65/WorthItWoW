@@ -4,8 +4,8 @@
 #3 = Tocha
 #4 = Beladona
 
-itens = [8.49, 11.75, 7.82, 6.99, 1.75]
-frasco = [149.99]
+itens = [7.14, 11.80, 8.42, 6.99, 1.75]
+frasco = [154.99]
 def quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt): #Para craftar Frasco de Poder Espectral
 
 
@@ -25,7 +25,7 @@ def quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt): #
     return menor
 
 def lucro_def(): #Lucro do Frasco de Poder Espectral
-    gold_atual = int(115000)
+    gold_atual = int(345000)
 
 
     craft = ((itens[4]*3) + (itens[0]*4) + (itens[1] * 4) + (itens[2] * 4) + (itens[3] * 4) )
@@ -49,9 +49,9 @@ def quantidade_print(): #Quantidade de itens possiveis para craft
     radicerne_qnt = radicerne_qnt/4
     beladona_qnt = beladona_qnt/4
     tocha_qnt = tocha_qnt/4
-    faltante = quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt)//4
+    faltante = quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt)
     print(f'Total de crafts: {quantidade(broto_qnt, ascend_qnt, radicerne_qnt, beladona_qnt, tocha_qnt)}')
-    print(f'Com mais {faltante} você consegue craftar outro item')
+    print(f'Você irá demorar {(faltante*2.5)/60:.0f} minutos para craftar')
     print()
 
 def quantity(): #Quantos Frasco de Poder Espectral, consegue craftar com a quantia de gold atual.
